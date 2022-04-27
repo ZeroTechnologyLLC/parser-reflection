@@ -211,7 +211,7 @@ trait ReflectionClassLikeTrait
     /**
      * {@inheritDoc}
      */
-    public function getConstants()
+    public function getConstants(?int $filter = null)
     {
         if (!isset($this->constants)) {
             $this->constants = $this->recursiveCollect(function (array &$result, \ReflectionClass $instance) {
